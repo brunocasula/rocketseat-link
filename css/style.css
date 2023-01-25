@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Poppins, sans-serif;
+    color: var(--text-color);
+}
+
+:root {
+    --text-color: white;
+    --backcolor: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.5);
+    --highlight-color: rgba(255, 255, 255, 0.3);
+    --swith-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+    --text-color: black;
+    --backcolor: linear-gradient(83.2deg, rgba(255, 255, 255, 1) 10.8%, rgba(214, 214, 214, 1) 94.3%);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --highlight-color: rgba(0, 0, 0, 0.3);
+    --swith-bg-url: url(./assets/sun.svg);
+}
+
+
+body {
+    /* background-image: url();
+    background-repeat: no-repeat;
+    background-position: top center; 
+    background-size: cover;
+    background: url() no-repeat top center/cover;
+    */
+    background-image: var(--backcolor);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 360px;
+    height: 712px;
+    /* border: 1px solid white; */
+    margin: 56px auto 0px;
+    border-radius: 4px;
+    padding: 0 24px;
+}
+
+/* Profile */
+
+#profile {
+    /* text-align: center; */
+    padding: 24px;
+}
+
+#profile-photo {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px auto;
+    border: 4px solid var(--stroke-color);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+#profile-photo p {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    top: 30px;
+    left: 30px;
+    position: absolute;
+}
+
+#profile>p {
+    margin-top: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#switch {
+    position: relative;
+    /* border: 1px solid tomato; */
+    width: 64px;
+    margin: 4px auto;
+
+
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    /* outline: none; */
+    border: none;
+    background: white var(--swith-bg-url) no-repeat center;
+    /* background-image: url(./assets/sun.svg); */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 9999px;
+}
+
+/* Links */
+
+nav {
+    margin-top: 10px;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+nav ul li a {
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    gap: 8px;
+    padding: 16px 24px;
+    /* margin: 0px 10px; */
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    transition: background 0.3s;
+}
+
+/* pseudo-selector */
+nav ul li a:hover {
+
+    background: var(--surface-color);
+    border: 1.5px solid rgb(211, 211, 211);
+    /* background:  rgba(0, 0, 0, .2); */
+}
+
+#social-links {
+    display: flex;
+    padding: 24px 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    /* border: 1px solid black; */
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+#social-links a:hover {
+    background: var(--highlight-color);
+
+}
+
+footer {
+    font-size: 14px;
+    padding: 24px 0;
+    text-align: center;
+    /* border: 1px solid black; */
+}
